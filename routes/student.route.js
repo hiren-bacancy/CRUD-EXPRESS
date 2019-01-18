@@ -3,6 +3,10 @@ const Student = require('../models/student.model');
 const router = express.Router();
 const student_controller = require('../controllers/student.controller');
 
+router.get('/',(req,res)=>{
+    res.send('server is running');
+})
+
 router.post('/create', student_controller.student_create);
 
 router.get('/:id', function (req, res) {
