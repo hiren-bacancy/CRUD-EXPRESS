@@ -5,7 +5,7 @@ const Student = require('./routes/student.route');
 
 const app = express();
 let url = 'mongodb://localhost:27017/Student';
-let port = 3000;
+const port = 3000
 
 let mongoDB = process.env.MONGODB_URI || url;
 mongoose.connect(mongoDB);

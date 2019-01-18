@@ -1,0 +1,103 @@
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    display: none;
+}
+  
+.alert.success {
+    background-color: #4CAF50;
+    border-radius: 6px;
+    display: none;
+}
+.alert.info {
+    background-color: #2196F3;
+    border-radius: 6px;
+    display: none;
+}
+.alert.warning {
+    background-color: #ff9800;
+    border-radius: 6px;
+    display: none;
+}
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: black;
+}
+.container {
+    display: grid;
+    grid-template-columns: 40% 60% ;
+    padding: 10px;
+}
+.col1 {
+    background-color: lightyellow;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+}
+* {
+    box-sizing: border-box;
+}
+
+input[type=text],input[type=email] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.fb {
+    background-color: rgb(76, 135, 175);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-top: 5px;
+}
+.customer {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.customer td, #customer th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.customer tr:nth-child(even){background-color: #f2f2f2;}
+
+.customer tr:hover {background-color: #ddd;}
+
+.customer th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(37, 55, 107);
+    color: white;
+}

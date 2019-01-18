@@ -1,0 +1,78 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD APP</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="col1">
+                    <div class="alert">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  
+                        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+                    </div>
+                          
+                    <div class="alert success">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  
+                        <strong>Success!</strong> Indicates a successful or positive action.
+                    </div>
+                          
+                    <div class="alert info">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  
+                        <strong>Info!</strong> Indicates a neutral informative change or action.
+                    </div>
+                          
+                    <div class="alert warning">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  
+                        <strong>Warning!</strong> Indicates a warning that might need attention.
+                    </div>
+                <form action="#" method="POST">
+                    <label for="fn">FIRST NAME</label>
+                    <input type="text" name="fname" id="fn">
+                    <label for="ln">LAST NAME</label>
+                    <input type="text" name="lname" id="ln">
+                    <label for="mail">EMAIL</label>
+                    <input type="email" name="uemail" id="mail">
+                    <label for="contact">CONTACT NO.</label>
+                    <input type="text" name="ucontact" id="contact">
+                    <!-- <button class="fb" id="fsb" onclick="sub()">SUBMIT</button> -->
+                    <button class="fb" id="fsb" type="button" onclick="sub()">SUBMIT</button>
+                </form>
+            </div>
+            <div class="col1">
+                <table class="customer" id="tb1">
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>CONTACT NO.</th>
+                            <th>OPTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col1">
+                <h4>SEARCH USER BY EMAIL</h4>
+                <input type="email" id="searchuser" placeholder="ENTER EMAIL">
+                <button class="fb">SEARCH</button>
+            </div>
+            <div class="col1">
+                <table class="customer">
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>CONTACT NO.</th>
+                            <th>OPTION</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <script src="connect.js"></script>
+    </body>
+</html>
