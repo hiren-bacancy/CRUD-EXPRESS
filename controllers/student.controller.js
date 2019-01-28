@@ -1,10 +1,10 @@
 const Student = require('../models/student.model');
 
-exports.student_create = function (req, res) {
+exports.student_create = function (req,res) {
     let student = new Student(
         {
-            fname: req.body.fname,
-            lname: req.body.lname,
+            fname : req.body.fname,
+            lname : req.body.lname,
             email : req.body.email,
             contact : req.body.contact
         }
@@ -33,8 +33,8 @@ exports.student_create = function (req, res) {
 
     student.save(function (err) {
         if (err) {
-            return next(err);
+            return console.log(err);
         }
-        res.send('Studnet Created successfully')
+        res.send('Student Created successfully')
     })
 };

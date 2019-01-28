@@ -4,27 +4,30 @@ const router = express.Router();
 const student_controller = require('../controllers/student.controller');
 
 router.get('/',(req,res)=>{
-    res.send('server is running');
+    Student.find({},function(err,student){
+        if (err) return next(err);
+        res.send(student);
+    })
 })
 
 router.post('/create', student_controller.student_create);
 
-router.get('/:id', function (req, res) {
-    Student.findById(req.params.id, function (err, student) {
+router.get('/:email', function (req, res) {
+    Student.findOne({ email : req.params.email }, function (err, student) {
         if (err) return next(err);
         res.send(student);
     })
 });
 
-router.put('/:id/update', function (req, res) {
-    Student.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, student) {
+router.put('/:email/update', function (req, res) {
+    Student.findOneAndUpdate({ email : req.params.email }, {$set: req.body}, function (err, student) {
         if (err) return next(err);
         res.send('Student udpated.');
     });
 });
 
-router.delete('/:id/delete', function (req, res) {
-    Student.findByIdAndRemove(req.params.id, function (err) {
+router.delete('/:email/delete', function (req, res) {
+    Student.findOneAndRemove({ email : req.params.email}, function (err) {
         if (err) return next(err);
         res.send('Deleted successfully!');
     })
